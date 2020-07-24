@@ -140,41 +140,54 @@ function dataHandling2(input) {
     bulanke = bulan[1];
     var namabulan;
     switch (bulanke) {
-        case 1:
+        case "01":
             namabulan = 'Januari';
-            //break;
-        case 2:
+            console.log(namabulan)
+            break;
+        case "02":
             namabulan = 'Februari';
-            //break;
-        case 3:
+            console.log(namabulan)
+            break;
+        case "03":
             namabulan = 'Maret';
-            //break;
-        case 4:
+            console.log(namabulan)
+            break;
+        case "04":
             namabulan = 'April';
-            //break;
-        case 5:
+            console.log(namabulan)
+            break;
+        case "05":
             namabulan = 'Mei';
-            //break;
-        case 6:
+            console.log(namabulan)
+            break;
+        case "06":
             namabulan = 'Juni';
-            //break;
-        case 7:
+            console.log(namabulan)
+            break;
+        case "07":
             namabulan = 'Juli';
-            //break;
-        case 8:
+            console.log(namabulan)
+            break;
+        case "08":
             namabulan = 'Agustus';
-            //break;
-        case 9:
+            console.log(namabulan)
+            break;
+        case "09":
             namabulan = 'September';
-            //break;
-        case 10:
+            console.log(namabulan)
+            break;
+        case "10":
             namabulan = 'Oktober';
-            //break;
-        case 11:
+            console.log(namabulan)
+            break;
+        case "11":
             namabulan = 'November';
-            //break;
-        case 12:
+            console.log(namabulan)
+            break;
+        case "12":
             namabulan = 'Desember';
+            console.log(namabulan)
+            break;
     }
     return bulanke;
 }
