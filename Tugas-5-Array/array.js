@@ -135,7 +135,14 @@ console.log(balikKata("I am Sanbers")) // srebnaS ma I
 console.log("Soal 6");
 
 function dataHandling2(input) {
-    input.splice(1, 2, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
+    // Output 1
+    var newArr = input.slice(0, 1)
+    newArr.push("Roman Alamsyah Elsharawy")
+    newArr.push("Provinsi " + input[2])
+    newArr.push(input[3], "Pria", "SMA Internasional Metro")
+    console.log(newArr)
+
+    // Output 2
     var bulan = input[3].split("/");
     bulanke = bulan[1];
     var namabulan;
@@ -189,8 +196,19 @@ function dataHandling2(input) {
             console.log(namabulan)
             break;
     }
-    return bulanke;
+
+    //Output 3 
+    var dateDesc = newArr[3].split("/").sort((a, b) => b - a)
+    console.log(dateDesc)
+        //Output 4 
+    var dateSplit = newArr[3].split("/").join("-")
+    console.log(dateSplit)
+        //Output 5 
+    var nameSlice = newArr[1].split("").slice(0, 15).join("")
+    console.log(nameSlice)
 }
+
+
 
 var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 dataHandling2(input);
