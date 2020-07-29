@@ -47,34 +47,43 @@ console.log(" ")
 console.log("---- SOAL 2 ----")
 
 class Clock {
+    // Code di sini
     constructor(template) {
-        this.template = template;
-    }
-    render() {
-        var date = new Date(this.template);
+        this.date
+        this.hours
+        this.mins
+        this.secs
+        this.timer
+        this.output = template
+        this.output = this.output.template.split(':')
 
-        var hours = date.getHours();
-        if (hours < 10) {
-            hours = '0' + this.hours;
-        }
-        var mins = date.getMinutes();
-        if (mins < 10) {
-            mins = '0' + this.mins;
-        }
-        var secs = date.getSeconds();
-        if (secs < 10) {
-            secs = '0' + this.secs;
-        }
-        template.replace('h', this.hours);
-        template.replace('h', this.mins);
-        template.replace('h', this.secs);
     }
+
+    render() {
+        this.date = new Date();
+        this.hours = this.date.getHours()
+        if (this.hours < 10) {
+            this.hours = '0' + this.hours;
+        }
+        this.mins = this.date.getMinutes()
+        if (this.mins < 10) {
+            this.mins = '0' + this.mins;
+        }
+        this.secs = this.date.getSeconds()
+        if (this.secs < 10) {
+            this.secs = '0' + this.secs;
+        }
+        this.output = this.hours + ':' + this.mins + ':' + this.secs
+        console.log(this.output);
+    }
+
     stop() {
         clearInterval(this.timer);
     }
+
     start() {
-        this.render();
-        this.timer = setInterval(this.render, 1000);
+        this.render
+        this.timer = setInterval(this.render.bind(this), 1000)
     }
 }
 
