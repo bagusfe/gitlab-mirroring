@@ -45,6 +45,12 @@ var input {
         subject: "quiz-1"
 }
 
+//TEST CASE
+viewScores(data, "quiz-1")
+viewScores(data, "quiz-2")
+viewScores(data, "quiz-3")
+
+
 
 
 
