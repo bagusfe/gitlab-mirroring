@@ -19,7 +19,7 @@ newFunction("a", [1, 2, 3], "test@tes.com").average();
 
 
 console.log("Soal View Score");
-viewScore = () => {
+var viewScores = (data, kuis) => {
     this.input = input;
     if (input.data[0][1]) {
         return input.data[1][1] + input.subject;
@@ -28,7 +28,7 @@ viewScore = () => {
     if (input.data[0][2]) {
 
     }
-    if (input.data[0][2]) {
+    if (input.data[0][3]) {
 
     }
 
