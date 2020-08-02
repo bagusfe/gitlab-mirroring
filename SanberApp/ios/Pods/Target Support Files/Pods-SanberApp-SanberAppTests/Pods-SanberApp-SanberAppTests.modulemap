@@ -1,0 +1,6 @@
+module Pods_SanberApp_SanberAppTests {
+  umbrella header "Pods-SanberApp-SanberAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

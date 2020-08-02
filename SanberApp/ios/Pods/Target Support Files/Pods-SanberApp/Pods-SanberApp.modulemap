@@ -1,0 +1,6 @@
+module Pods_SanberApp {
+  umbrella header "Pods-SanberApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
