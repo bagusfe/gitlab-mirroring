@@ -4,14 +4,14 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import VideoItem from "./Component/VideoItem"; 
 import data from './data.json';
 
-export default class App extends Component {
+export default class YoutubeUI extends Component {
     render() {
 
        return (
         <View style={styles.container}>
             <View style= {styles.navBar1}></View>
             <View style= {styles.navBar2}> 
-                <Image source={require("./images/logo.png")} style={{width: 150, height:16}}/>
+                <Image source={require("./images/logo.png")} style={{width: 150, height:22}}/>
                 <View style={styles.rightNav}>
                     <TouchableOpacity>
                         <Icon style={styles.navItem} name="tap-and-play" size={30}/>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     navItem: {
-        marginLeft: 20
+        marginLeft: 10
     },
     tabBar1: {
         backgroundColor: 'white',
@@ -109,4 +109,3 @@ const styles = StyleSheet.create({
         flex: 1
     }
 }); 
-
