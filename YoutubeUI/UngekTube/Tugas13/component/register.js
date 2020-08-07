@@ -3,8 +3,7 @@ import {StyleSheet,View, Text, Image, TouchableOpacity, ScrollView} from 'react-
 import { Input, Item ,Button, Content} from 'native-base';
 
 
-export default class Register extends Component {
-    render() {
+function Register ({navigation}) {
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.navBar1}></View>
@@ -40,13 +39,13 @@ export default class Register extends Component {
                         </Item>
                     </View>
                     <View style={styles.button}>
-                            <TouchableOpacity>
-                                <Button primary style={{width: 120}}><Text style={styles.teksButton}> Login </Text></Button>
+                            <TouchableOpacity onPress={() => navigation.navigate('About')}>
+                                <Button primary style={{width: 120}}><Text style={styles.teksButton}> Daftar </Text></Button>
                             </TouchableOpacity>
                     </View>
                     <View style={styles.link}>
                         <Text>Sudah memiliki akun?</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                             <Text style={{color: '#c3c'}}>  Login aja!</Text>
                         </TouchableOpacity>
                     </View>
@@ -55,7 +54,7 @@ export default class Register extends Component {
             </ScrollView>
         );
     }
-}
+export default Register;
 
 
 const styles=StyleSheet.create({

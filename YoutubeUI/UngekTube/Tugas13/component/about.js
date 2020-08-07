@@ -1,17 +1,19 @@
-import React, {Component} from 'react'; 
+import React from 'react'; 
 import {StyleSheet,View, Text, Image, TouchableOpacity, ScrollView, StatusBar} from 'react-native'; 
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Input, Item ,Button, Content} from 'native-base';
 
 
-export default class About extends Component {
-    render() {
+function About ({navigation}) {
         return (
             // <StatusBar barStyle="dark-content"/> 
                 <ScrollView style={styles.container}>
                     <View style={styles.navBar1}>
+                        <TouchableOpacity onPress={()=>navigation.navigate('Login')}>
                         <Icon name="person" size={25} style={{paddingLeft:20}}/>
-                        <Text style={{fontSize: 25, paddingLeft: 270}}>Profile</Text>     
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={()=>navigation.navigate('SkillScreen')}>
+                        <Text style={{fontSize: 25, paddingLeft: 270}}>Skills</Text> 
+                        </TouchableOpacity>    
                     </View>
                     <View style={styles.navBar2}>
                         <Text style={{fontSize: 25, paddingLeft: 130}}> Tentang Saya</Text>     
@@ -56,7 +58,7 @@ export default class About extends Component {
                 </ScrollView>
         )
     }
-}
+    export default About;
 
 
 

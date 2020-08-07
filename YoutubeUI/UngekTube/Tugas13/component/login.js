@@ -1,10 +1,10 @@
-import React, {Component} from 'react'; 
+import 'react-native-gesture-handler';
+import React from 'react'; 
 import {StyleSheet,View, Text, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import { Input, Item ,Button} from 'native-base';
 
 
-export default class Login extends Component {
-    render() {
+function Login({ navigation }) {
         return (
             <ScrollView contentContainerStyle={styles.contentContainer} style={styles.container} >
                 <View style={styles.navBar1}></View>
@@ -27,13 +27,13 @@ export default class Login extends Component {
                     </Item>
                 </View>
                 <View style={styles.button}>
-                        <TouchableOpacity>
-                            <Button primary style={{width: 120}}><Text style={styles.teksButton}> Login </Text></Button>
+                        <TouchableOpacity >
+                            <Button primary style={{width: 120}}><Text style={styles.teksButton} onPress={() => navigation.navigate('About')}> Login </Text></Button>
                         </TouchableOpacity>
                 </View>
                 <View style={styles.link}>
                     <Text>Belum memiliki akun?</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                         <Text style={{color: '#c3c'}}>  Daftar Sekarang!</Text>
                     </TouchableOpacity>
                 </View>
@@ -41,7 +41,8 @@ export default class Login extends Component {
             </ScrollView>
         );
     }
-}
+
+    export default Login;
 
 
 const styles=StyleSheet.create({
