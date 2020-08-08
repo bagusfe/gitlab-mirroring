@@ -12,25 +12,38 @@ import ProjectScreen from './Tugas15/ProjectScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+const Tabs = createBottomTabNavigator(); 
 
 export default class App extends React.Component {
   createHomeStack = () =>  
   <Stack.Navigator initialRouteName="Login" headerMode="none">
-    <Stack.Screen name="Login" component={Login} />
+    <Stack.Screen name="Bottom" component={this.createBottomTabs} />
+    {/* <Stack.Screen name="Login" component={Login} /> */}
     <Stack.Screen name="Register" component={Register} />
     <Stack.Screen name="About" component={About} />
-    <Stack.Screen name="SkillScreen" component={SkillScreen} />
-    <Stack.Screen name="ProjectScreen" component={ProjectScreen} />
-    <Stack.Screen name="AddScreen" component={AddScreen} />
+    {/* <Stack.Screen name="Bottom Tabs" children={this.createBottomTabs} /> */}
+  
   </Stack.Navigator>
+
+  createBottomTabs = () => {
+    return <Tabs.Navigator >
+        <Tabs.Screen name="Skill" component={SkillScreen}/>
+        {/* <Tabs.Screen name="Skill" component={SkillScreen}/> */}
+        <Tabs.Screen name="Proj" component={ProjectScreen}/>
+        <Tabs.Screen name="AddSc" component={AddScreen}/> 
+    </Tabs.Navigator>
+  }
+
 render() {
   return (
       <NavigationContainer>
         <Drawer.Navigator> 
-          <Drawer.Screen name="Home" component={this.createHomeStack} />
+          <Drawer.Screen name="Home" children={this.createHomeStack} />
           <Drawer.Screen name="Notes" component={Main} />
           <Drawer.Screen name="ProjectScreen" component={ProjectScreen} />
           <Drawer.Screen name="AddScreen" component={AddScreen} />
