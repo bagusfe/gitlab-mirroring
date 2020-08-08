@@ -1,0 +1,4 @@
+#Mon Aug 03 17:06:22 WIB 2020
+base.0=/Users/mycatalina/imrn0720/SanberApp/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
